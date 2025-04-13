@@ -123,8 +123,8 @@ Credit student with the original amount.
 
 ----
 ### 🧪 How to Build, Run & Test
-git clone https://github.com/olowo17/tredBasePayment.git
-cd payment
+https://github.com/olowo17/TredBase-Payment.git
+
 
 ---
 ## Build and Run the project
