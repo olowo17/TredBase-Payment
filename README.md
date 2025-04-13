@@ -46,10 +46,27 @@ The app demonstrates secure design, multi-table entity relationships, and balanc
   - Each parent in a `SHARED` payment must have at least **half** the required amount
   - Parents must have **sufficient balance** for any transaction
   - The `@Transactional` boundary ensures **data consistency** across related tables.
+
+# Role-Based Access Control (RBAC) with JWT
+The application uses Spring Security with JWT (JSON Web Token) for stateless authentication and authorization.
+
+Upon login, a JWT access token is issued to the authenticated user.
+
+This token must be included in the Authorization header of protected endpoints using the format:
   - Only users with the Admin role can access the payment processing endpoint.
   - Parent or Student users will receive a 401 Unauthorized response if they attempt to access the payment endpoint.
 
+
+🛡️ Permission-Based Endpoint Access
+Access to sensitive endpoints (like /api/payments) is strictly controlled:
+
+✅ Only users with the ADMIN role can access and perform payment transactions.
+
+❌ Users with roles PARENT and STUDENT are denied access.
+
+This access control is enforced via Spring Security's method-level or route-based authorization.
 -----
+
 ## Postman Collection Link
 https://documenter.getpostman.com/view/33523574/2sB2ca5eF6
 
