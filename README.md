@@ -47,7 +47,7 @@ The app demonstrates secure design, multi-table entity relationships, and balanc
   - Parents must have **sufficient balance** for any transaction
   - The `@Transactional` boundary ensures **data consistency** across related tables.
 
-# Role-Based Access Control (RBAC) with JWT
+## Role-Based Access Control (RBAC) with JWT
 The application uses Spring Security with JWT (JSON Web Token) for stateless authentication and authorization.
 
 Upon login, a JWT access token is issued to the authenticated user.
